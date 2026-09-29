@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re:Brush — 코스트코 가이드라인 A Type</title>
+
+  <!-- Open Graph (카카오톡/인스타그램/SNS 공유 미리보기) -->
+  <!-- TODO: 배포 도메인 확정 후 og:url / og:image 절대경로로 교체 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="리브러쉬 × 코스트코 크리에이터 가이드라인">
+  <meta property="og:description" content="Re:Brush × Costco Creator Campaign — 코스트코 방문·비교·구매 가이드, 신청 및 정산 안내">
+  <meta property="og:image" content="image/banner.png">
+  <meta name="description" content="Re:Brush × Costco Creator Campaign — 코스트코 방문·비교·구매 가이드, 신청 및 정산 안내">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="theme-color" content="#1693A6">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1693A6;
+      --brand-deep: #0F6F7E;
+      --brand-line: #3CB0C1;
+      --brand-pale: #E0F3F6;
+      --brand-text: #11788A;
+      --cream: #F5FAFB;
+      --warm-white: #EAF4F6;
+      --text-dark: #14303A;
+      --text-mid: #536D75;
+      --text-light: #93A9AF;
+      --border: #D2E4E8;
+      --tag-bg: #E1EFF2;
+      --on-brand: #FFFFFF;
+      --on-brand-accent: #BDEBF3;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    /* BANNER */
+    .banner-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      background: #E9EBEE;
+    }
+    .banner-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 0 24px 34px;
+      background: linear-gradient(to bottom,
+        rgba(20,30,44,0) 42%,
+        rgba(20,30,44,0.30) 64%,
+        rgba(20,30,44,0.70) 86%,
+        rgba(20,30,44,0.88) 100%);
+    }
+    .header-eyebrow {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      font-weight: 400;
+      color: rgba(255,255,255,0.78);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .header-title {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .header-sub {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 480px) {
+      .header-title { font-size: 18px; }
+      .banner-overlay { padding: 0 18px 24px; }
+    }
+
+    /* SECTION */
+    .section {
+      padding: 48px 28px;
+      border-bottom: 1px solid var(--border);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section:last-child { border-bottom: none; }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--brand-text);
+    }
+    .section-title {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    /* ABOUT */
+    .about-lead {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.8;
+    }
+    .brand-img-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+    .brand-img-wrap img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .about-grid { display: grid; gap: 12px; }
+    .about-item {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .about-item-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-text);
+      margin-bottom: 6px;
+    }
+    .about-item-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .brand-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 12.5px;
+      font-weight: 600;
+      border-radius: 20px;
+      border: 1px solid var(--brand-line);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .brand-link-btn:active { opacity: 0.75; }
+
+    /* INFO BOX */
+    .info-box {
+      background: var(--brand);
+      color: var(--on-brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .info-box-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-key {
+      min-width: 70px;
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .info-val { color: var(--on-brand); font-weight: 500; line-height: 1.6; }
+    .info-val strong { color: var(--on-brand-accent); }
+
+    /* PRODUCT */
+    .product-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .product-photo {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+    .product-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 11px 16px;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 20px;
+      text-decoration: none;
+      align-self: flex-start;
+      border: 1px solid var(--border);
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* PRODUCT OPTIONS */
+    .prod-pick-note {
+      font-size: 12px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .prod-pick-note strong { color: var(--brand-text); }
+    .prod-option {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #FFFFFF;
+    }
+    .prod-option-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .prod-option-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .prod-option-items {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dark);
+      background: var(--tag-bg);
+      border-radius: 8px;
+      padding: 10px 12px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .prod-option-desc {
+      display: flex;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .prod-option-desc::before {
+      content: '→';
+      color: var(--brand-text);
+      flex-shrink: 0;
+    }
+    .prod-or {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+    }
+
+    /* PRODUCT PHOTOS */
+    .prod-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .prod-photo-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 6px 10px;
+      text-align: center;
+    }
+    .prod-photo-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      display: block;
+    }
+    .prod-photo-step {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--brand-text);
+      margin-top: 4px;
+    }
+    .prod-photo-cap {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--text-mid);
+      line-height: 1.4;
+      margin-top: 2px;
+      word-break: keep-all;
+    }
+
+    /* ONE-LINE BRIEF */
+    .brief-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .brief-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .brief-line {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.55;
+      letter-spacing: -0.01em;
+    }
+    .brief-line em { font-style: normal; color: var(--brand); }
+    .brief-protocol {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: 0.01em;
+      margin-top: 6px;
+    }
+
+    /* 3-STEP 제품 카드 */
+    .step-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+    }
+    .step-card:last-child { margin-bottom: 0; }
+    .step-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--on-brand);
+      background: var(--brand);
+      padding: 3px 9px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .step-prod-en {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--brand-text);
+      letter-spacing: 0.02em;
+      margin-bottom: 2px;
+    }
+    .step-prod {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.45;
+    }
+    .step-meta {
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 2px;
+      margin-bottom: 10px;
+    }
+    .step-lead {
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.65;
+      padding: 11px 13px;
+      background: var(--tag-bg);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .step-feat { font-size: 12.5px; line-height: 1.6; margin-bottom: 10px; }
+    .step-feat:last-of-type { margin-bottom: 0; }
+    .step-feat strong { display: block; color: var(--text-dark); margin-bottom: 2px; }
+    .step-feat span { color: var(--text-mid); }
+    .step-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .step-col-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .step-col ul { margin: 0; padding-left: 15px; font-size: 12px; color: var(--text-mid); line-height: 1.65; }
+    .step-col ul strong { color: var(--text-dark); }
+    .step-tags {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      font-size: 12px;
+      color: var(--brand-text);
+      font-weight: 500;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    /* GUARDRAILS */
+    .guard-grid { display: grid; gap: 12px; }
+    .guard-box { border-radius: 12px; padding: 18px 20px; }
+    .guard-box.must { background: var(--text-dark); }
+    .guard-box.avoid { background: var(--warm-white); border: 1px solid var(--border); }
+    .guard-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .guard-box.must .guard-title { color: #FFFFFF; }
+    .guard-box.avoid .guard-title { color: var(--text-dark); }
+    .guard-item {
+      font-size: 12.5px;
+      line-height: 1.7;
+      padding: 4px 0 4px 18px;
+      position: relative;
+    }
+    .guard-box.must .guard-item { color: rgba(255,255,255,0.85); }
+    .guard-box.avoid .guard-item { color: var(--text-mid); }
+    .guard-item::before { content: '\25A1'; position: absolute; left: 0; opacity: 0.7; }
+
+    /* ANGLE GUIDE */
+    .angle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .angle-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #FFFFFF;
+      padding: 14px 16px;
+    }
+    .angle-num {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--brand-text);
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .angle-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .angle-desc { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+    .angle-thumb {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--tag-bg);
+      margin-bottom: 10px;
+    }
+    .angle-thumb img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+    }
+    .angle-thumb-tag {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(20,48,58,0.72);
+      color: #FFFFFF;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 3px 7px;
+      border-radius: 20px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* THUMBNAIL GUIDE */
+    .thumb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .thumb-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+    .thumb-item img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      background: var(--tag-bg);
+    }
+    .thumb-cap { padding: 10px 12px 12px; }
+    .thumb-cap-num {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--brand-text);
+    }
+    .thumb-cap-name { font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin: 2px 0 4px; }
+    .thumb-cap-desc { font-size: 11.5px; color: var(--text-mid); line-height: 1.55; }
+
+    /* RULE CARDS */
+    .rule-grid { display: grid; gap: 10px; }
+    .rule-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 16px 18px;
+    }
+    .rule-num { font-size: 10px; font-weight: 700; color: var(--text-light); letter-spacing: 0.1em; }
+    .rule-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); margin: 2px 0 4px; }
+    .rule-sub { font-size: 12px; font-weight: 700; color: var(--brand-text); margin-bottom: 8px; }
+    .rule-body { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; }
+    .rule-body p { margin-bottom: 6px; }
+    .rule-body p:last-child { margin-bottom: 0; }
+
+    /* CONCEPT REFERENCE LIST */
+    .idea-item {
+      display: flex;
+      gap: 11px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .idea-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .idea-num {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-text);
+      margin-top: 2px;
+      min-width: 18px;
+    }
+    .idea-name { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .idea-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+
+    /* FOLD (섹션 아코디언) */
+    .fold {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .fold[open] { border-color: var(--brand-line); }
+    .fold-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .fold-summary::-webkit-details-marker { display: none; }
+    .fold-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fold[open] .fold-icon { background: var(--brand-pale); color: var(--brand-text); border: 1px solid var(--brand-line); }
+    .fold-title { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .fold-badge {
+      flex-shrink: 0;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      border: 1px solid var(--brand-line);
+    }
+    .fold-count { flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--text-light); }
+    .fold-chevron { font-size: 11px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; }
+    .fold[open] .fold-chevron { transform: rotate(180deg); color: var(--brand-text); }
+    .fold-body { padding: 16px; border-top: 1px solid var(--border); background: var(--cream); }
+    .fold-group { display: flex; flex-direction: column; gap: 10px; }
+
+    @media (max-width: 480px) {
+      .brief-line { font-size: 16.5px; }
+      .brief-protocol { font-size: 14.5px; }
+      .brief-box { padding: 18px 20px; }
+      .step-cols { grid-template-columns: 1fr; gap: 12px; }
+      .angle-item { padding: 10px 11px 13px; }
+      .angle-desc { font-size: 11.5px; }
+      .thumb-cap { padding: 9px 10px 11px; }
+      .thumb-cap-desc { font-size: 11px; }
+      .prod-photo-cap { font-size: 10px; }
+      .guard-box { padding: 16px 18px; }
+    }
+
+    /* MUST / RECOMMEND */
+    .must-list { display: grid; gap: 10px; margin-bottom: 24px; }
+    .must-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .must-icon { font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+    .must-item strong { color: var(--text-dark); }
+
+    /* CONCEPT ACCORDION */
+    .concept-intro {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .concept-pick {
+      display: inline-flex;
+      align-items: center;
+      background: var(--brand);
+      color: var(--on-brand);
+      border: 1px solid var(--brand-line);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 10px;
+      margin: 0 2px;
+    }
+    .concept-list {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .concept {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .concept[open] { border-color: var(--brand-line); }
+    .concept-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .concept-summary::-webkit-details-marker { display: none; }
+    .concept-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      color: var(--brand-text);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .concept[open] .concept-num { background: var(--brand); color: var(--on-brand); border: 1px solid var(--brand-line); }
+    .concept-name { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .concept-chevron { font-size: 11px; color: var(--text-light); transition: transform 0.2s; flex-shrink: 0; }
+    .concept[open] .concept-chevron { transform: rotate(180deg); color: var(--brand-text); }
+    .concept-body { padding: 2px 16px 18px; border-top: 1px solid var(--border); }
+    .concept-steps {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      counter-reset: step;
+    }
+    .concept-steps > li {
+      counter-increment: step;
+      display: flex;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .concept-steps > li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      margin-top: 1px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      color: var(--brand-text);
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .concept-quotes, .concept-refs {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .concept-quotes-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--brand-text);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .quote-chip {
+      background: var(--tag-bg);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .quote-chip:last-child { margin-bottom: 0; }
+    .concept-ref-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 9px 12px;
+      margin-bottom: 6px;
+      min-height: 38px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .concept-ref-link:last-child { margin-bottom: 0; }
+    .concept-ref-link:active { background: var(--tag-bg); }
+    .concept-ref-link::after {
+      content: '→';
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--brand-text);
+    }
+
+    .sub-list { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+    .sub-list li { margin-bottom: 4px; }
+    .sub-list li:last-child { margin-bottom: 0; }
+
+    .key-msg-box {
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .key-msg-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .key-msg-item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .key-msg-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .key-msg-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .key-msg-text {
+      font-size: 13px;
+      color: var(--on-brand);
+      line-height: 1.7;
+    }
+    .key-msg-text strong { color: var(--on-brand-accent); }
+    .key-msg-item .sub-list { color: rgba(255,255,255,0.9); font-size: 12.5px; margin-top: 6px; padding-left: 16px; }
+    .key-msg-item .sub-list li { margin-bottom: 5px; }
+    .nb { white-space: nowrap; }
+    /* 깊게 중첩된 링크 라벨에서는 묶음을 풀어 가로 넘침 방지 */
+    .concept-ref-link .nb, .concept-name .nb { white-space: normal; }
+
+    .rec-list {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .rec-title { font-size: 12px; font-weight: 700; color: var(--brand-text); margin-bottom: 12px; }
+    .rec-item { font-size: 12.5px; color: var(--text-mid); padding: 5px 0; border-bottom: 1px solid var(--border); line-height: 1.6; }
+    .rec-item:last-child { border-bottom: none; }
+
+    /* HASHTAG */
+    .hashtag-section { margin-top: 20px; }
+    .hashtag-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hashtag-label .required { background: var(--brand); color: var(--on-brand); font-size: 10px; padding: 2px 7px; border-radius: 10px; border: 1px solid var(--brand-line); }
+    .hashtag-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .tag-group-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .hashtag {
+      font-size: 13px;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      transition: opacity 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hashtag:active { opacity: 0.6; }
+    .hashtag.req { background: var(--brand); color: var(--on-brand); border: 1px solid var(--brand-line); }
+    .hashtag.req::after { content: '⎘'; font-size: 11px; color: rgba(255,255,255,0.55); }
+
+    /* COLLAB */
+    .collab-box {
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    .collab-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.62);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .collab-account {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .collab-account:last-child { border-bottom: none; }
+    .collab-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.85); flex-shrink: 0; }
+    .collab-handle {
+      font-size: 13.5px;
+      color: var(--on-brand);
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .collab-handle::after { content: '⎘'; font-size: 11px; color: rgba(255,255,255,0.5); }
+    .collab-note { margin-left: auto; font-size: 10px; color: rgba(255,255,255,0.55); }
+
+    /* WARNING */
+    .warning-box {
+      background: #FFFBF0;
+      border: 1px solid #F0D080;
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 12.5px;
+      color: #7A5A00;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+    .warning-box strong { color: #5A3D00; }
+
+    .ref-note { font-size: 11px; color: var(--text-light); margin-bottom: 4px; }
+
+    /* APPLICATION FORM */
+    .form-group { margin-bottom: 18px; }
+
+    /* 제품 라인 선택 */
+    .line-pick { display: grid; gap: 10px; }
+    .line-opt {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #FFFFFF;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .line-opt input[type="radio"] {
+      margin-top: 2px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--brand);
+    }
+    .line-opt:has(input:checked) {
+      border-color: var(--brand);
+      background: var(--brand-pale);
+    }
+    .line-opt-name {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .line-opt-items {
+      display: block;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .form-label .req { color: #C0504D; margin-left: 2px; }
+    .form-label .opt { font-size: 11px; color: var(--text-light); font-weight: 500; margin-left: 4px; }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text-dark);
+      background: white;
+    }
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--brand-line);
+    }
+    .form-input[readonly] { background: var(--warm-white); }
+    .form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+    .form-row-zip { display: flex; gap: 8px; }
+    .form-row-zip .form-input { flex: 1; min-width: 0; }
+    .zip-search-btn {
+      padding: 0 18px;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .zip-search-btn:active { opacity: 0.8; }
+
+    .note-box {
+      border: 1px dashed var(--brand-line);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      background: var(--cream);
+    }
+    .note-box-title { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .note-box ul { padding-left: 18px; font-size: 12.5px; color: var(--text-mid); line-height: 1.8; }
+
+    .agree-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0;
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      cursor: pointer;
+    }
+    .agree-row input[type="checkbox"] {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      accent-color: var(--brand);
+    }
+    .agree-row strong { color: var(--brand); font-weight: 700; }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      background: var(--text-dark);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .submit-btn:active { opacity: 0.85; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* SETTLEMENT (v2) */
+    .settlement-lead { font-size: 13px; color: var(--text-mid); margin-bottom: 20px; line-height: 1.7; }
+    .settle-tag-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      background: var(--tag-bg);
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .settle-doc-text { font-size: 13px; color: var(--text-mid); margin: 0 0 20px; }
+    .settle-copy-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      color: var(--text-dark);
+    }
+    .settle-copy-box span { word-break: break-all; }
+    .settle-copy-btn {
+      flex-shrink: 0;
+      background: var(--text-dark);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .settle-copy-btn:active { opacity: 0.8; }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: var(--border); margin: 24px 0; }
+
+    /* COPY TOAST */
+    .copy-toast {
+      position: fixed;
+      bottom: max(32px, env(safe-area-inset-bottom, 32px));
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: rgba(20,48,58,0.94);
+      color: white;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 9999;
+      white-space: nowrap;
+    }
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--brand);
+      border-top: 1px solid var(--brand-line);
+      color: rgba(255,255,255,0.62);
+      text-align: center;
+      padding: 36px 32px;
+      padding-bottom: max(36px, env(safe-area-inset-bottom, 36px));
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+    .footer strong { color: var(--on-brand); }
+
+    /* KOREAN LINE-BREAKING — 마지막 줄에 단어 하나만 남는 것 방지 */
+    .about-lead, .about-item-desc, .concept-intro, .key-msg-text, .quote-chip,
+    .sub-list li, .rec-item, .must-item > div, .info-row, .ref-note,
+    .warning-box, .collab-note {
+      text-wrap: pretty;
+    }
+    .section-title, .header-title, .concept-name, .key-msg-badge,
+    .concept-quotes-label, .rec-title, .about-item-title, .concept-ref-link {
+      text-wrap: balance;
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 36px 20px; }
+      .section-title { font-size: 18px; }
+      .section-label { font-size: 9.5px; }
+      .about-lead { font-size: 13px; }
+      .info-box { padding: 20px; }
+      .info-row { font-size: 13px; }
+      .info-key { min-width: 62px; font-size: 11px; }
+      .product-name { font-size: 14px; }
+      .key-msg-box { padding: 18px 20px; }
+      .key-msg-text { font-size: 12.5px; }
+      .must-item { font-size: 12.5px; padding: 12px 14px; }
+      .hashtag { font-size: 12px; padding: 10px 12px; }
+      .collab-handle { font-size: 13px; }
+      .footer { padding: 28px 20px; font-size: 11px; padding-bottom: max(28px, env(safe-area-inset-bottom, 28px)); }
+
+      /* 자간 — 좁은 화면에서 한 줄에 더 담기도록 미세 조정 */
+      body { letter-spacing: -0.01em; }
+      .key-msg-badge { font-size: 10.5px; letter-spacing: 0.04em; }
+      .concept-quotes-label { letter-spacing: 0.03em; }
+      .section-label { letter-spacing: 0.18em; }
+      .header-eyebrow { letter-spacing: 0.24em; }
+
+      /* 정렬 — 들여쓰기·여백 축소 */
+      .sub-list { padding-left: 16px; }
+      .quote-chip { font-size: 12px; padding: 9px 11px; }
+      .concept-body { padding: 2px 14px 16px; }
+
+      /* 데스크톱용 수동 줄바꿈 해제 */
+      .pc-br { display: none; }
+
+      /* 터치 영역 44px 확보 */
+      .concept-ref-link { min-height: 44px; }
+    }
+
+    @media (max-width: 360px) {
+      .section { padding: 28px 14px; }
+      .key-msg-box { padding: 16px 16px; }
+      .key-msg-text { font-size: 12px; }
+      .quote-chip { font-size: 11.5px; padding: 8px 10px; }
+      .sub-list { padding-left: 15px; font-size: 12px; }
+      .concept-summary { padding-left: 12px; padding-right: 12px; }
+      .fold-summary { padding-left: 12px; padding-right: 12px; }
+      .fold-body { padding: 14px 12px; }
+      .prod-photo-grid { gap: 6px; }
+      .prod-photo-item { padding: 6px 4px 8px; }
+      .prod-photo-cap { font-size: 9.5px; }
+      .angle-grid, .thumb-grid { gap: 8px; }
+      .section-title { font-size: 17px; }
+      .hashtag { font-size: 11.5px; padding: 9px 10px; }
+      .about-item { padding: 14px 16px; }
+      .info-box { padding: 16px; }
+    }
+
+    /* ===== Re:Brush 추가 스타일 ===== */
+
+    /* 미확정 정보 표시 — 확정되면 class="tbd"만 지우면 됩니다 */
+    .tbd {
+      background: #FFF3B0;
+      color: #6B5200 !important;
+      border-radius: 4px;
+      padding: 0 4px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* 텍스트 히어로 (banner.png 준비되면 LOYR처럼 img로 교체 가능) */
+    .hero {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 84% 16%, rgba(255,255,255,0.22) 0 40px, transparent 41px),
+        radial-gradient(circle at 72% 32%, rgba(255,255,255,0.14) 0 16px, transparent 17px),
+        radial-gradient(circle at 92% 42%, rgba(255,255,255,0.12) 0 9px, transparent 10px),
+        linear-gradient(160deg, #3FB8C9 0%, #1693A6 50%, #0E6371 100%);
+      padding: 70px 28px 42px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .hero .header-title { font-size: 27px; margin-bottom: 10px; }
+    .hero-chip-row { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; margin-top: 18px; }
+    .hero-chip {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 54px 20px 32px; }
+      .hero .header-title { font-size: 21px; }
+    }
+
+    /* 제품 이미지 */
+    .prod-hero {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .prod-hero img { width: 100%; height: auto; display: block; }
+    .banner-overlay .hero-chip { color: #FFFFFF; }
+    .banner-overlay .hero-chip-row { margin-top: 14px; }
+
+    /* 숫자 강조 */
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stat {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 6px;
+      text-align: center;
+    }
+    .stat-num { font-size: 18px; font-weight: 700; color: var(--brand); line-height: 1.2; letter-spacing: -0.02em; }
+    .stat-num small { font-size: 11px; font-weight: 700; }
+    .stat-cap { font-size: 11px; color: var(--text-mid); margin-top: 4px; line-height: 1.4; }
+
+    /* 차별점 */
+    .diff-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .diff-vs {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 8px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+    .diff-side {
+      border-radius: 8px;
+      padding: 10px 11px;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .diff-side.them { background: var(--warm-white); color: var(--text-mid); }
+    .diff-side.us { background: var(--brand); color: var(--on-brand); }
+    .diff-side b { display: block; font-size: 10px; letter-spacing: 0.06em; margin-bottom: 3px; opacity: 0.75; }
+    .diff-arrow { align-self: center; font-size: 12px; color: var(--text-light); font-weight: 700; }
+
+    /* 방문 동선 */
+    .flow { display: grid; margin-top: 4px; }
+    .flow-item { display: flex; gap: 14px; position: relative; padding-bottom: 16px; }
+    .flow-item:last-child { padding-bottom: 0; }
+    .flow-item::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .flow-item:last-child::before { display: none; }
+    .flow-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--on-brand);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .flow-body {
+      flex: 1;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 15px;
+    }
+    .flow-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .flow-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+
+    /* 포인트/비교 카드 (표 대신 모바일 카드) */
+    .pt-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    .pt-card:last-child { margin-bottom: 0; }
+    .pt-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .pt-badge {
+      flex-shrink: 0;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--on-brand);
+      background: var(--brand);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .pt-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .pt-row { display: flex; gap: 8px; font-size: 12.5px; line-height: 1.6; padding: 3px 0; }
+    .pt-key { flex-shrink: 0; width: 52px; font-size: 11px; font-weight: 700; color: var(--brand-text); padding-top: 1px; }
+    .pt-val { color: var(--text-mid); }
+    .pt-quote {
+      margin-top: 8px;
+      background: var(--tag-bg);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .ph {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-text);
+      background: repeating-linear-gradient(135deg, var(--tag-bg) 0 10px, var(--warm-white) 10px 20px);
+      border-radius: 8px;
+      padding: 8px;
+    }
+
+    .elig-box {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--text-dark);
+      color: #FFFFFF;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .elig-box .must-icon { font-size: 18px; }
+    .elig-box strong { color: var(--on-brand-accent); }
+
+    .agree-list { display: grid; gap: 4px; margin: 20px 0; }
+    .agree-list .agree-row { margin: 0; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+    .agree-list .agree-row:last-child { border-bottom: none; }
+
+    @media (max-width: 360px) {
+      .stat-num { font-size: 16px; }
+      .diff-vs { grid-template-columns: 1fr; }
+      .diff-arrow { transform: rotate(90deg); justify-self: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner-wrap">
+  <img src="image/banner.png" alt="리브러쉬 100배 농축 가글" width="768" height="568">
+  <div class="banner-overlay">
+    <div class="header-eyebrow">Influencer Guideline</div>
+    <div class="header-title">리브러쉬 × 코스트코 가이드라인</div>
+    <div class="header-sub">Re:Brush × Costco Campaign · A Type</div>
+    <div class="hero-chip-row">
+      <span class="hero-chip">코스트코 입점</span>
+      <span class="hero-chip">매장 방문·구매</span>
+      <span class="hero-chip">릴스</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="section-label">About Brand</div>
+  <p class="about-lead">
+    <strong style="display:block;font-size:17px;font-weight:700;color:var(--text-dark);line-height:1.45;margin-bottom:6px;">국내 최초 100배 농축 가글액을 만든 프리미엄 토탈 구강케어 브랜드, 리브러쉬</strong>
+    <span style="display:block;font-size:13px;font-weight:600;letter-spacing:0.04em;color:var(--brand-text);margin-bottom:16px;">THERAPEUTIC MOUTHWASH</span>
+    <strong style="color:var(--text-dark);">Re:Brush(리브러쉬)</strong>는 프리미엄 토탈 구강케어 브랜드입니다. 국내 최초 100배 농축 가글액을 개발하여, 단순히 입냄새를 향으로 덮는 것이 아닌 구취의 원인을 직접 제거하는 <strong style="color:var(--text-dark);">‘테라퓨틱 가글(Therapeutic Mouthwash)’</strong> 시대를 열었습니다.
+  </p>
+  <div class="brand-img-wrap">
+    <img src="image/brand.png" alt="리브러쉬 농축 가글 50ml">
+  </div>
+  <div class="about-grid">
+    <div class="about-item">
+      <div class="about-item-title"><span style="letter-spacing:0.06em;">100X CONCENTRATED</span></div>
+      <div class="about-item-desc">
+        <strong style="display:block;color:var(--text-dark);font-weight:700;margin-bottom:6px;">작은 한 병, 대용량 이상의 사용 횟수</strong>
+        물에 희석해서 쓰는 100배 농축 가글. 50ml 한 병으로 약 250회 사용할 수 있습니다.
+      </div>
+    </div>
+    <div class="about-item">
+      <div class="about-item-title"><span style="letter-spacing:0.06em;">0% ALCOHOL</span></div>
+      <div class="about-item-desc">
+        <strong style="display:block;color:var(--text-dark);font-weight:700;margin-bottom:6px;">맵고 따가운 가글 대신, 순한 무알콜</strong>
+        알코올 가글의 자극이 부담스러운 분들을 위한 클린 가글입니다.
+      </div>
+    </div>
+    <div class="about-item">
+      <div class="about-item-title"><span style="letter-spacing:0.06em;">PORTABLE</span></div>
+      <div class="about-item-desc">
+        <strong style="display:block;color:var(--text-dark);font-weight:700;">욕실 선반부터 파우치까지, 어디든 쏙 들어가는 크기</strong>
+      </div>
+    </div>
+  </div>
+  <a href="https://rebrush.co.kr/" target="_blank" rel="noopener" class="brand-link-btn">브랜드 바로가기 →</a>
+</div>
+
+<!-- 캠페인 개요 -->
+<div class="section">
+  <div class="section-label">Campaign Info</div>
+  <div class="section-title">캠페인 개요</div>
+
+  <div class="elig-box">
+    <div class="must-icon">🪪</div>
+    <div><strong>코스트코 회원권 보유자만 참여 가능</strong><br>매장 방문 → 실구매 → 사용 후기까지 직접 촬영하는 캠페인입니다.</div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-box-title">Schedule & Details</div>
+    <div class="info-row">
+      <div class="info-key">방문 지점</div>
+      <div class="info-val"><strong>전국 코스트코 전 지점</strong></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">업로드</div>
+      <div class="info-val"><strong>10월 22일 이후</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">상세 일정은 선정 후 개별 조율 · ⚠️ 확정 일정 미준수 시 고료 지급 불가</span></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">형식</div>
+      <div class="info-val">인스타그램 릴스 (세로 영상)</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">제품</div>
+      <div class="info-val">매장에서 <strong>직접 구매</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">제품 구매 비용은 고료에 포함되어 있습니다</span></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">고료</div>
+      <div class="info-val"><strong>10만원</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">제품 구매비 포함</span></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">공동작업자</div>
+      <div class="info-val"><strong>필수</strong></div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">2차 활용</div>
+      <div class="info-val">동의</div>
+    </div>
+    <div class="info-row">
+      <div class="info-key">업로드 유지</div>
+      <div class="info-val">6개월</div>
+    </div>
+  </div>
+
+  <div class="key-msg-box" style="margin-top:20px;">
+    <div class="key-msg-title">캠페인 목적&nbsp;·&nbsp;<span class="nb">코스트코 입점 소식</span></div>
+    <div class="key-msg-text" style="margin-top:-8px;margin-bottom:4px;">리브러쉬 <strong>클로브 100배 농축 가글 더블세트</strong>가 코스트코에 입점했습니다. 팔로워들이 <strong>“다음에 코스트코 가면 사야지”</strong> 하고 매장을 찾게 만드는 것이 이번 캠페인의 목표입니다.</div>
+    <div class="key-msg-item">
+      <div class="key-msg-badge">콘텐츠 방향</div>
+      <div class="key-msg-text">“코스트코에서 가글을 비교하다가 <strong>리브러쉬 더블세트를 선택한 이유</strong>”를 자연스러운 <span class="nb">쇼핑 브이로그</span>로</div>
+    </div>
+    <div class="key-msg-item">
+      <div class="key-msg-badge">한 편에 담을 흐름</div>
+      <div class="key-msg-text">코스트코 방문 → 제품 비교 → 더블세트 선택·구매 → <span class="nb">집에서 개봉·사용</span> → 보관 및 활용</div>
+    </div>
+  </div>
+
+  <!-- 캠페인 제품 -->
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:10px;letter-spacing:0.05em;">캠페인 제품</div>
+  <div class="product-box">
+    <div class="prod-hero">
+      <img src="image/costco-pack.png" alt="리브러쉬 클로브 100배 농축 가글 더블세트 코스트코 패키지" loading="lazy">
+    </div>
+    <div>
+      <div class="product-name">리브러쉬 클로브 100배 농축 가글 더블세트</div>
+      <div style="font-size:12.5px;font-weight:700;color:var(--brand-text);margin-top:2px;">한 방울로 숨결리셋 — 국내최초 무알콜 100배 농축가글</div>
+      <div style="font-size:12.5px;color:var(--text-mid);margin-top:2px;">50ml × 2개 &nbsp;·&nbsp; 코스트코 판매가 추후 안내</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-num">100<small>배</small></div><div class="stat-cap">물에 희석하는<br>농축 가글</div></div>
+      <div class="stat"><div class="stat-num">250<small>회</small></div><div class="stat-cap">1개(50ml)당<br>사용 가능 횟수</div></div>
+      <div class="stat"><div class="stat-num">0<small>%</small></div><div class="stat-cap">알코올<br>무알콜 가글</div></div>
+    </div>
+    <div class="ref-note">• 사용 횟수는 브랜드 기준 1회 사용량 기준입니다. 회당 비용은 코스트코 최종 판매가 확정 후 안내드립니다.</div>
+    <a href="https://rebrush.co.kr/product/%ED%81%B4%EB%A1%9C%EB%B8%8C-100%EB%B0%B0-%EB%86%8D%EC%B6%95-%EA%B0%80%EA%B8%80-50ml/43/category/64/display/1/" target="_blank" rel="noopener" class="product-link-btn">제품 상세 보러가기 →</a>
+  </div>
+
+  <!-- 차별점 -->
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.05em;">코스트코 매대에서의 차별점</div>
+  <div class="fold-group">
+    <div class="diff-card">
+      <div class="pt-head"><span class="pt-badge">01</span><span class="pt-title">작은 사이즈, 대용량 이상의 사용 횟수</span></div>
+      <div class="diff-vs">
+        <div class="diff-side them"><b>매대의 다른 가글</b>800ml~1.5L 대용량 병 위주. 크고 무거워 보관·휴대가 부담</div>
+        <div class="diff-arrow">VS</div>
+        <div class="diff-side us"><b>리브러쉬</b>한 손에 들어오는 50ml. 희석해서 1개당 약 250회 사용</div>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="pt-head"><span class="pt-badge">02</span><span class="pt-title">맵지 않은 무알콜 가글</span></div>
+      <div class="diff-vs">
+        <div class="diff-side them"><b>매대의 다른 가글</b>맵고 화한 알코올 가글 위주</div>
+        <div class="diff-arrow">VS</div>
+        <div class="diff-side us"><b>리브러쉬</b>0% 알코올. 자극이 부담스러운 분들의 선택지</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 방문 가이드 -->
+<div class="section">
+  <div class="section-label">Store Visit</div>
+  <div class="section-title">코스트코 방문 가이드</div>
+
+  <div class="flow">
+    <div class="flow-item">
+      <div class="flow-num">1</div>
+      <div class="flow-body">
+        <div class="flow-title">코스트코 방문</div>
+        <div class="flow-desc">가까운 코스트코 어느 지점이든 좋습니다. 입구·카트 등 <strong>코스트코임이 드러나는 오프닝</strong>으로 시작해 주세요.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">2</div>
+      <div class="flow-body">
+        <div class="flow-title">가글 코너에서 제품 비교</div>
+        <div class="flow-desc">대용량 가글 병과 리브러쉬 50ml를 <strong>같은 거리에서</strong> 나란히 비교해 주세요. 크기 차이가 한눈에 보이는 게 핵심입니다.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">3</div>
+      <div class="flow-body">
+        <div class="flow-title">더블세트 선택·구매</div>
+        <div class="flow-desc">왜 이걸 골랐는지 한마디와 함께 <strong>카트에 담고 계산</strong>하는 장면까지 담아주세요.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">4</div>
+      <div class="flow-body">
+        <div class="flow-title">집에서 개봉·사용</div>
+        <div class="flow-desc">패키지 개봉 → 물에 <strong>희석하는 과정</strong> → 가글 사용 후 솔직한 사용감.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">5</div>
+      <div class="flow-body">
+        <div class="flow-title">보관 및 활용</div>
+        <div class="flow-desc">욕실 선반에 쏙, 하나는 집에 하나는 회사·가방에. <strong>더블세트 나눠 쓰기</strong>로 마무리해 주세요.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    ⚠️ <strong>매장 내 촬영 에티켓</strong><br>
+    • 다른 고객·직원의 얼굴이 식별되지 않도록 촬영해 주세요.<br>
+    • 통로를 막거나 진열 상품을 흐트러뜨리지 말아 주세요.<br>
+    • 비교 후 꺼낸 타사 제품은 <strong>제자리에 돌려놓아</strong> 주세요.<br>
+    • 매장 직원이 촬영을 제지하는 경우 <strong>즉시 중단</strong>하고 매장 규정을 따라 주세요.
+  </div>
+</div>
+
+<!-- 제작 가이드 -->
+<div class="section">
+  <div class="section-label">Content Guide</div>
+  <div class="section-title">제작 가이드</div>
+
+  <div class="brief-box">
+    <div class="brief-label">One-line Brief</div>
+    <div class="brief-line">코스트코에서 가글을 <em>비교</em>하다가&mdash;<br>리브러쉬 더블세트를 <em>선택</em>한 이유</div>
+    <div class="brief-protocol">MY COSTCO MOUTHWASH PICK</div>
+  </div>
+
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#127916; 콘텐츠 흐름</div>
+  <div class="pt-card" style="margin-bottom:10px;">
+    <div class="pt-quote" style="margin-top:0;">코스트코 방문 → 제품 비교 → 더블세트 선택·구매 → 집에서 개봉·사용 → 보관 및 활용</div>
+  </div>
+  <div class="pt-card">
+    <div class="pt-head"><span class="pt-badge">TIP</span><span class="pt-title">‘추천상품’ 콘텐츠로 진행할 경우</span></div>
+    <div class="pt-row"><span class="pt-key">수량</span><span class="pt-val">함께 소개하는 상품은 <strong>최대 3개 정도</strong>로 적게 가져가 주세요.</span></div>
+    <div class="pt-row"><span class="pt-key">구성</span><span class="pt-val">가글 등 <strong>동일 카테고리가 아닌</strong>, 식품 등 <strong>다른 카테고리 상품</strong>과 함께 노출해 주세요.</span></div>
+    <div class="pt-quote">예) “코스트코 가면 꼭 사는 3가지” — 베이커리 · 식품 · 리브러쉬 더블세트</div>
+  </div>
+
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#10004; 영상 및 캡션 필수 포함</div>
+  <div class="must-list">
+    <div class="must-item">
+      <div class="must-icon">&#128722;</div>
+      <div><strong>[매장 비교]</strong> 코스트코 매대에서 <strong>타 가글과 사이즈 비교</strong> 장면, 그리고 <strong>“작은 사이즈로 1개당 250번까지 사용 가능”</strong> 비교 포인트를 꼭 담아주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon">&#128179;</div>
+      <div><strong>[실구매]</strong> 더블세트를 카트에 담고 <strong>직접 구매</strong>하는 장면을 포함해 주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon">&#127916;</div>
+      <div><strong>[사용 후기]</strong> 집에서 개봉 → 희석 → 사용하는 모습과 실제 사용감을 담아주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon">&#9997;&#65039;</div>
+      <div><strong>[캡션]</strong> 캡션 최상단 첫 줄에 <strong><span class="nb brand-handle">@rebrush_official</span></strong> 표기, 그리고 <strong>“코스트코에서 구매 가능”</strong> 내용을 꼭 넣어주세요.</div>
+    </div>
+    <div class="must-item">
+      <div class="must-icon">&#128279;</div>
+      <div><strong>[공동작업자]</strong> <span class="nb brand-handle">@rebrush_official</span> 초대 <strong>필수</strong>입니다.</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;font-weight:700;color:var(--text-mid);margin:24px 0 10px;letter-spacing:0.03em;">&#9654; 상세 가이드 <span style="font-weight:500;color:var(--text-light);">— 항목을 탭하여 펼쳐보세요</span></div>
+  <div class="concept-list">
+
+    <details class="concept" open>
+      <summary class="concept-summary">
+        <span class="concept-num">1</span>
+        <span class="concept-name">영상에 담아주실 <span class="nb">핵심 포인트 4</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div style="margin-top:14px;">
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-badge">01</span><span class="pt-title">작은 본품 크기</span></div>
+            <div class="pt-row"><span class="pt-key">전달 내용</span><span class="pt-val">한 병 50ml로 보관하기 부담 없는 크기</span></div>
+            <div class="pt-row"><span class="pt-key">추천 장면</span><span class="pt-val">본품을 손에 들거나 욕실 선반에 놓기</span></div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-badge">02</span><span class="pt-title">100배 농축 방식</span></div>
+            <div class="pt-row"><span class="pt-key">전달 내용</span><span class="pt-val">물에 희석해서 사용하는 농축 가글</span></div>
+            <div class="pt-row"><span class="pt-key">추천 장면</span><span class="pt-val">패키지의 농축 표시와 실제 희석 과정</span></div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-badge">03</span><span class="pt-title">무알콜</span></div>
+            <div class="pt-row"><span class="pt-key">전달 내용</span><span class="pt-val">무알콜 가글을 찾는 분들의 선택 요소</span></div>
+            <div class="pt-row"><span class="pt-key">추천 장면</span><span class="pt-val">패키지의 무알콜 표시 확대</span></div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-badge">04</span><span class="pt-title">더블세트 활용</span></div>
+            <div class="pt-row"><span class="pt-key">전달 내용</span><span class="pt-val">두 병을 생활 동선에 맞게 나눠 사용</span></div>
+            <div class="pt-row"><span class="pt-key">추천 장면</span><span class="pt-val">하나는 집에, 하나는 회사에 두거나 가지고 다니는 모습</span></div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">2</span>
+        <span class="concept-name">비교할 때 강조할 요소&nbsp;·&nbsp;<span class="nb">장면 &amp; 멘트</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="concept-intro">각 강점별로 <strong>무엇과 비교하고</strong>, 영상에서 <strong>어떤 장면·멘트</strong>로 보여주면 좋은지 정리했습니다. 멘트는 참고용이니 본인 말투로 바꿔 주세요.</div>
+        <div style="margin-top:14px;">
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">작은 본품 크기</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">앞서 확인한 800ml~1.5L 병 제품과 크기 차이가 큼</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">대용량 제품과 50ml 본품을 같은 거리에서 촬영</span></div>
+            <div class="pt-quote">“가글인데 한 손에 들어오는 크기.”</div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">100배 농축 방식</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">겉에 적힌 원액 용량만으로 사용량을 비교하기 어려운 제품</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">50ml 표시 다음에 ‘100배 농축’ 표시를 연결</span></div>
+            <div class="pt-quote">“작아서 금방 쓸 줄 알았는데, 물에 희석해서 쓰는 농축형이래요.”</div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">욕실 보관 편의성</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">큰 병을 놓기 부담스러운 좁은 선반에서 장점</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">칫솔 옆에 본품을 놓는 장면</span></div>
+            <div class="pt-quote">“욕실 선반 한쪽에 쏙.”</div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">휴대하기 좋은 크기</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">큰 병을 통째로 들고 다니는 경우와 비교 가능</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">파우치에 본품을 넣기</span></div>
+            <div class="pt-quote">“물과 컵이 있는 곳에서 사용할 휴대용으로도.”</div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">더블세트 활용</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">두 병을 서로 다른 장소에 두고 사용 가능</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">두 병을 각각 욕실·출근 가방에 배치</span></div>
+            <div class="pt-quote">“하나는 집에, 하나는 회사에.”</div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">무알콜</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">알콜 함유 제품을 피하려는 소비자에게 선택 이유가 됨</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">패키지의 무알콜 표시 클로즈업</span></div>
+            <div class="pt-quote">“무알콜인 것도 제가 고른 이유.”</div>
+          </div>
+          <div class="pt-card">
+            <div class="pt-head"><span class="pt-title">사용 횟수·가성비</span></div>
+            <div class="pt-row"><span class="pt-key">비교</span><span class="pt-val">구매 가격보다 ‘몇 번 쓰는지’로 설명할 여지</span></div>
+            <div class="pt-row"><span class="pt-key">장면</span><span class="pt-val">1개당 약 250회 사용 포인트 강조. 회당 비용 자막은 최종 판매가 확정 후 안내드립니다</span></div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="concept">
+      <summary class="concept-summary">
+        <span class="concept-num">3</span>
+        <span class="concept-name">비교할 때 <span class="nb">꼭 참고해 주세요</span></span>
+        <span class="concept-chevron">&#8964;</span>
+      </summary>
+      <div class="concept-body">
+        <div class="must-list" style="margin-top:14px;margin-bottom:0;">
+          <div class="must-item">
+            <div class="must-icon">&#128207;</div>
+            <div>대용량 병 제품과는 <strong>본품 크기, 보관 공간, 휴대 방식</strong>을 비교해 주세요.</div>
+          </div>
+          <div class="must-item">
+            <div class="must-icon">&#128247;</div>
+            <div>크기 비교 시 두 제품을 카메라에서 <strong>같은 거리</strong>에 놓아주세요.</div>
+          </div>
+          <div class="must-item">
+            <div class="must-icon">&#127807;</div>
+            <div>무알콜은 <strong>리브러쉬의 특징</strong>으로 소개해 주세요. 코스트코에는 다른 무알콜 가글도 있습니다.</div>
+          </div>
+          <div class="must-item">
+            <div class="must-icon">&#128172;</div>
+            <div>스틱 가글 등 제품마다 사용 방식이 다르므로 “모든 가글보다 편하다”보다 <strong>본인이 편하게 느낀 상황</strong>을 설명해 주세요.</div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="fold-group">
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">&#9878;</span>
+      <span class="fold-title">콘텐츠 가드레일</span>
+      <span class="fold-count">Must&nbsp;/&nbsp;Avoid</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+      <div class="guard-grid">
+        <div class="guard-box must">
+          <div class="guard-title">Must Include</div>
+          <div class="guard-item">코스트코 매장 + 매대 사이즈 비교 장면</div>
+          <div class="guard-item">정확한 제품명 (클로브 100배 농축 가글 더블세트)</div>
+          <div class="guard-item">실구매 장면과 집에서의 실제 사용 후기</div>
+          <div class="guard-item">“코스트코에서 구매 가능” 안내</div>
+          <div class="guard-item">광고 표기(#유료광고)·계정 태그·공동작업자</div>
+        </div>
+        <div class="guard-box avoid">
+          <div class="guard-title">Avoid</div>
+          <div class="guard-item">“코스트코 유일한 무알콜 가글” 등 단정 표현</div>
+          <div class="guard-item">“모든 가글보다 편하다” 등 절대 비교</div>
+          <div class="guard-item">타 브랜드명·로고를 부각하거나 비방하는 표현</div>
+          <div class="guard-item">추천상품형에서 가글 등 동일 카테고리 상품 함께 추천</div>
+          <div class="guard-item">“구취 치료” 등 의학적 효능 단정, 양치 대체 표현</div>
+          <div class="guard-item">가격·회당 비용 임의 안내, 타 고객 얼굴 노출, 상업 음원</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">&#128203;</span>
+      <span class="fold-title">진행 규정</span>
+      <span class="fold-count">3</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+      <div class="rule-grid">
+        <div class="rule-card">
+          <div class="rule-num">01</div>
+          <div class="rule-title">음원 사용 규정</div>
+          <div class="rule-sub">상업적 음원 사용 불가</div>
+          <div class="rule-body">
+            <p>유료 음원, 인기 차트곡 등 저작권 이슈 가능 음원은 사용할 수 없습니다.</p>
+            <p>플랫폼 제공 <strong>'오리지널 사운드'</strong> 또는 사용권이 확보된 무료 음원만 사용해 주세요.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">02</div>
+          <div class="rule-title">브랜드 공동작업 요청</div>
+          <div class="rule-sub"><span class="nb brand-handle">@rebrush_official</span> 초대 필수</div>
+          <div class="rule-body">
+            <p>업로드 시 <strong>'공동 작업자 초대'</strong> 기능으로 리브러쉬 공식 계정을 초대해 주세요.</p>
+            <p>단순 태그가 아닌 <strong>공동작업 요청</strong>이어야 브랜드 계정에도 함께 노출됩니다.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">03</div>
+          <div class="rule-title">필수 표기 가이드</div>
+          <div class="rule-sub">협업 표기 및 계정 태그</div>
+          <div class="rule-body">
+            <p>캡션 <strong>최상단 첫 줄</strong>에 <span class="nb brand-handle">@rebrush_official</span> 표기</p>
+            <p>필수 해시태그는 아래 <strong>해시태그</strong> 항목을 참고해 주세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ref-note" style="margin-top:12px;text-align:center;">&#8251; 공동작업 수락까지 시간이 소요될 수 있으니, 게시 전 요청 상태를 확인해 주세요.</div>
+    </div>
+  </details>
+
+  <details class="fold">
+    <summary class="fold-summary">
+      <span class="fold-icon">#</span>
+      <span class="fold-title">해시태그</span>
+      <span class="fold-badge">필수</span>
+      <span class="fold-chevron">&#8964;</span>
+    </summary>
+    <div class="fold-body">
+      <div class="hashtag-section" style="margin-top:0;">
+        <div class="hashtag-label">필수 해시태그 <span class="required">필수</span></div>
+        <div class="hashtag-wrap">
+          <div class="hashtag req">#유료광고</div>
+          <div class="hashtag req">#리브러쉬</div>
+          <div class="hashtag req">#코스트코</div>
+          <div class="hashtag req">#코스트코가글</div>
+          <div class="hashtag req">#농축가글</div>
+          <div class="hashtag req">#무알콜가글</div>
+          <div class="hashtag req">#코스트코추천템</div>
+        </div>
+        <div class="ref-note"><span class="tbd">• 해시태그는 브랜드 확정 전 초안입니다.</span></div>
+        <div class="ref-note">• 태그를 탭하면 복사됩니다.</div>
+      </div>
+    </div>
+  </details>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="warning-box">
+    &#9888;&#65039; <strong>업로드 기한을 반드시 준수해주세요.</strong><br>
+    기간 내 업로드가 이루어지지 않을 경우 고료 지급이 불가합니다.<br><br>
+    <span class="nb">공동작업자 설정</span> 및 콘텐츠 2차 활용에 동의하는 것으로 간주됩니다.
+  </div>
+</div>
+
+<!-- 캠페인 신청 -->
+<div class="section" id="apply">
+  <div class="section-label">Application</div>
+  <div class="section-title">캠페인 신청</div>
+
+  <div class="elig-box">
+    <div class="must-icon">🪪</div>
+    <div><strong>코스트코 회원권이 있는 분만</strong> 신청해 주세요.<br>매장 실구매가 필수인 캠페인입니다.</div>
+  </div>
+
+  <form id="applicationForm" onsubmit="return submitApplication(event)">
+    <div class="form-group">
+      <label class="form-label" for="appName">이름<span class="req">*</span></label>
+      <input type="text" id="appName" name="name" class="form-input" placeholder="홍길동" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appInstagram">인스타그램 링크<span class="req">*</span></label>
+      <input type="text" id="appInstagram" name="instagram" class="form-input" placeholder="@username 또는 instagram.com/username" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appPhone">휴대폰<span class="req">*</span></label>
+      <input type="tel" id="appPhone" name="phone" class="form-input" placeholder="010-0000-0000" inputmode="numeric" pattern="[0-9\-]*" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appEmail">이메일<span class="opt">(선택)</span></label>
+      <input type="email" id="appEmail" name="email" class="form-input" placeholder="name@email.com">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appStore">방문 예정 코스트코 지점<span class="req">*</span></label>
+      <input type="text" id="appStore" name="store" class="form-input" placeholder="예: 양재점" required>
+      <div class="ref-note" style="margin-top:8px;">• 전국 코스트코 전 지점 방문 가능합니다.</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="appNote">요청사항<span class="opt">(선택)</span></label>
+      <textarea id="appNote" name="note" class="form-textarea" placeholder="문의나 요청사항을 적어주세요"></textarea>
+    </div>
+
+    <div class="note-box" style="margin-top:16px;">
+      <div class="note-box-title">📌 구매·정산 안내</div>
+      <ul>
+        <li>제품은 코스트코 매장에서 <strong>직접 구매</strong>해 주세요. 제품 구매 비용은 <strong>고료에 포함</strong>되어 있습니다.</li>
+        <li>업로드는 <strong>10월 22일 이후</strong> 진행되며, 상세 일정은 선정 후 개별 조율합니다.</li>
+        <li>조율된 업로드 일정 내 업로드 시 정산이 진행됩니다.</li>
+        <li>정산 자료 제출 후 <strong>2주</strong> 이내 지급됩니다.</li>
+      </ul>
+    </div>
+
+    <div class="note-box">
+      <div class="note-box-title">📌 콘텐츠 활용 안내</div>
+      <ul>
+        <li>콘텐츠는 브랜드 계정 내 스토리, 피드에 활용될 수 있습니다.</li>
+        <li>2차 활용에 동의해 주신 분들의 콘텐츠는 리브러쉬 공식 홈페이지, SNS, 플랫폼 등에 활용될 수 있습니다.</li>
+      </ul>
+    </div>
+
+    <div class="agree-list">
+      <label class="agree-row"><input type="checkbox" name="membership" value="보유" required><span><strong>[필수]</strong> 코스트코 회원권을 보유하고 있으며, 매장 방문 및 실구매가 가능합니다.</span></label>
+      <label class="agree-row"><input type="checkbox" required><span><strong>[필수]</strong> 제품 구매 비용이 고료에 포함되어 있음을 확인했으며, 가이드라인 및 고료 조건에 동의합니다.</span></label>
+      <label class="agree-row"><input type="checkbox" required><span><strong>[필수]</strong> 제작된 콘텐츠의 브랜드 및 SIRIAI 2차 활용에 동의합니다.</span></label>
+      <label class="agree-row"><input type="checkbox" required><span><strong>[필수]</strong> 매장 내 촬영 에티켓을 준수하며, 매장 제지 시 촬영을 중단합니다.</span></label>
+      <label class="agree-row"><input type="checkbox" required><span><strong>[필수]</strong> 캠페인 선정 후 개인 변심 및 일방적인 취소는 불가함에 동의합니다.</span></label>
+    </div>
+
+    <button type="submit" class="submit-btn">리브러쉬 캠페인 지원서 제출하기</button>
+  </form>
+</div>
+
+<!-- 정산 -->
+<div class="section">
+  <div class="section-label">Settlement</div>
+  <div class="section-title">정산</div>
+  <div class="settlement-lead">캠페인 선정 완료 후 정산을 위한 서류를 누락 없이 제출해 주세요.<br>정산은 <strong>정산 자료 제출 후 2주</strong> 이내 지급됩니다.</div>
+
+  <div class="settle-tag-label">제출 서류</div>
+  <div class="settle-doc-text">— 성함, 연락처, 신분증 사본 (뒷자리 포함), 통장 사본</div>
+
+  <div class="settle-tag-label">수신 이메일</div>
+  <div class="settle-copy-box">
+    <span>hwangyksiriai@gmail.com</span>
+    <button type="button" class="settle-copy-btn" onclick="copyText('hwangyksiriai@gmail.com')">복사</button>
+  </div>
+
+  <div class="settle-tag-label">메일 제목</div>
+  <div class="settle-copy-box">
+    <span>리브러쉬 _이름_@인스타핸들</span>
+    <button type="button" class="settle-copy-btn" onclick="copyText('리브러쉬 _이름_@인스타핸들')">복사</button>
+  </div>
+
+  <div class="warning-box">
+    ! 정산 자료는 브랜드로부터 확인 안내를 받은 인플루언서에 한해서 제출해 주세요.<br>
+    ! 확정 안내를 받지 못한 경우 서류를 제출하지 마세요.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Re:Brush (리브러쉬)</strong><br>
+  본 가이드라인은 선별된 크리에이터에게만 제공되는 자료입니다.<br>
+  문의사항이 있으시면 담당자에게 연락해 주세요.
+</div>
+
+<div class="copy-toast" id="copyToast"></div>
+
+<script>
+  // ===== 캠페인 설정 (여기만 바꾸면 페이지 전체에 반영) =====
+  const BRAND_HANDLE = '@rebrush_official';
+  // google-apps-script/Code.gs를 새 구글시트에 배포한 뒤 발급되는 웹 앱 URL
+  const GAS_WEB_APP_URL = 'YOUR_WEB_APP_URL';
+  const APP_TIER = 'A';      // 타입 — 시트에서 타입별 탭으로 분리 저장
+  const APP_PRICE = '10만원';   // 고료
+  const CAMPAIGN = '리브러쉬_코스트코';
+
+  document.querySelectorAll('.brand-handle').forEach(el => {
+    if (BRAND_HANDLE) el.textContent = BRAND_HANDLE;
+    else el.classList.add('tbd');
+  });
+
+  function showToast(text) {
+    const toast = document.getElementById('copyToast');
+    toast.textContent = text;
+    toast.classList.add('show');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => showToast('"' + text + '" 복사됨'));
+  }
+
+  document.querySelectorAll('.hashtag').forEach(el => {
+    el.addEventListener('click', () => copyText(el.textContent.replace('⎘', '').trim()));
+  });
+  document.querySelectorAll('.brand-handle').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => { if (BRAND_HANDLE) copyText(BRAND_HANDLE); });
+  });
+
+  // 인스타그램 입력값을 https://www.instagram.com/handle 형태로 통일
+  // @handle, handle, instagram.com/handle, https://www.instagram.com/handle/?igsh=... 모두 처리
+  function normalizeInstagramLink(value) {
+    let v = (value || '').trim().replace(/\s+/g, '');
+    if (!v) return '';
+    const m = v.match(/instagram\.com\/([^/?#]+)/i);
+    let handle = m ? m[1] : v;
+    handle = handle.replace(/^@+/, '').replace(/[/?#].*$/, '');
+    if (!/^[A-Za-z0-9._]{1,30}$/.test(handle)) return v; // 핸들 형식이 아니면 입력값 그대로
+    return 'https://www.instagram.com/' + handle;
+  }
+  const appInstagramEl = document.getElementById('appInstagram');
+  appInstagramEl.addEventListener('blur', () => {
+    if (appInstagramEl.value.trim()) appInstagramEl.value = normalizeInstagramLink(appInstagramEl.value);
+  });
+
+  // 신청 폼 제출
+  // 휴대폰(phone)은 앞자리 0 보존을 위해 항상 문자열로 취급
+  function submitApplication(e) {
+    e.preventDefault();
+    const form = document.getElementById('applicationForm');
+    const data = {
+      campaign: CAMPAIGN,
+      tier: APP_TIER,
+      price: APP_PRICE,
+      name: form.name.value.trim(),
+      instagram: normalizeInstagramLink(form.instagram.value),
+      phone: String(form.phone.value.trim()),
+      email: form.email.value.trim(),
+      membership: form.membership.checked ? '보유' : '',
+      store: form.store.value.trim(),
+      note: form.note.value.trim()
+    };
+
+    if (!GAS_WEB_APP_URL || GAS_WEB_APP_URL.indexOf('YOUR_WEB_APP_URL') !== -1) {
+      console.log('캠페인 신청 데이터', data);
+      showToast('구글시트 연동 URL이 설정되지 않았습니다');
+      return false;
+    }
+
+    const submitBtn = form.querySelector('.submit-btn');
+    const label = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = '제출 중...';
+
+    // no-cors를 쓰지 않아야 실제 저장 성공 여부를 확인할 수 있음
+    // (text/plain은 preflight 없는 단순 요청이라 Apps Script 웹앱에서도 동작)
+    fetch(GAS_WEB_APP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    }).then(r => r.json()).then(res => {
+      if (!res.ok) throw new Error(res.error || 'save failed');
+      showToast('제출이 완료되었습니다');
+      form.reset();
+    }).catch(() => {
+      showToast('제출 중 오류가 발생했습니다. 다시 시도해 주세요.');
+    }).finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = label;
+    });
+
+    return false;
+  }
+</script>
+</body>
+</html>

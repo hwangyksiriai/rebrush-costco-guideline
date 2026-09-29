@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Re:Brush — 가이드 허브</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="리브러쉬 × 코스트코 가이드 허브">
+  <meta property="og:description" content="Re:Brush × Costco Campaign — 타입별 가이드라인">
+  <meta property="og:image" content="image/banner.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #1693A6;
+      --brand-deep: #0F6F7E;
+      --brand-line: #3CB0C1;
+      --brand-pale: #E0F3F6;
+      --brand-text: #11788A;
+      --cream: #F5FAFB;
+      --warm-white: #EAF4F6;
+      --text-dark: #14303A;
+      --text-mid: #536D75;
+      --text-light: #93A9AF;
+      --border: #D2E4E8;
+      --tag-bg: #E1EFF2;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 100vh;
+      overflow-x: hidden;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+    .wrap { max-width: 640px; margin: 0 auto; padding-bottom: 64px; }
+
+    /* PASSWORD GATE */
+    #gate {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: linear-gradient(160deg, #0B2A31 0%, var(--brand-deep) 58%, var(--brand) 120%);
+    }
+    .gate-box {
+      width: 100%;
+      max-width: 340px;
+      text-align: center;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 22px;
+      padding: clamp(32px, 8vw, 40px) clamp(22px, 6vw, 28px);
+      backdrop-filter: blur(6px);
+    }
+    .gate-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.32);
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding: 6px 16px;
+      margin-bottom: 18px;
+    }
+    .gate-box h1 {
+      color: #FFFFFF;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .gate-box p {
+      color: rgba(255,255,255,0.72);
+      font-size: 12.5px;
+      margin-bottom: 22px;
+    }
+    .gate-box input {
+      width: 100%;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 20px;
+      letter-spacing: 0.4em;
+      color: #FFFFFF;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.30);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .gate-box input:focus { outline: 2px solid rgba(255,255,255,0.55); outline-offset: 1px; }
+    .gate-box input::placeholder { color: rgba(255,255,255,0.32); letter-spacing: 0.3em; font-size: 14px; }
+    .gate-box button {
+      width: 100%;
+      min-height: 48px;
+      background: #FFFFFF;
+      color: var(--brand-deep);
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .gate-err { color: #FFD3C4; font-size: 12px; margin-top: 12px; min-height: 16px; }
+
+    /* HUB */
+    #hub { display: none; }
+
+    .hub-hero {
+      position: relative;
+      background: #DCEBF0;
+    }
+    .hub-hero img { width: 100%; height: auto; display: block; }
+    .hub-hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 0 24px 34px;
+      background: linear-gradient(to bottom,
+        rgba(20,48,58,0) 42%,
+        rgba(20,48,58,0.30) 64%,
+        rgba(20,48,58,0.70) 86%,
+        rgba(20,48,58,0.88) 100%);
+    }
+    .hero-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      font-weight: 400;
+      color: rgba(255,255,255,0.78);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .hero-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .hero-sub {
+      font-size: 10px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .hub-body { padding: 36px 28px 0; }
+    .hub-label {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand-text);
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      margin-bottom: 12px;
+    }
+    .hub-title { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+    .hub-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.7; margin-bottom: 20px; }
+    .hub-desc strong { color: var(--brand-text); font-weight: 700; }
+
+    .hub-list { display: flex; flex-direction: column; gap: 10px; }
+    .hub-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 64px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--text-dark);
+    }
+    .hub-card:active { background: var(--warm-white); border-color: var(--brand-line); }
+    .hub-card-left { display: flex; align-items: center; gap: 13px; min-width: 0; }
+    .hub-card-badge {
+      flex: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--brand);
+      border: 1px solid var(--brand-line);
+      color: #FFFFFF;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hub-card-title { display: block; font-size: 14.5px; font-weight: 700; letter-spacing: -0.01em; }
+    .hub-card-sub { display: block; font-size: 11.5px; color: var(--text-mid); margin-top: 1px; }
+    .hub-card-fee {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-text);
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2px 9px;
+      margin-left: 6px;
+      white-space: nowrap;
+    }
+    .hub-card-arrow { flex: none; font-size: 14px; color: var(--brand-text); }
+
+    .hub-note {
+      font-size: 11px;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+
+    .hub-footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-top: 32px;
+      padding: 24px 28px;
+      padding-bottom: max(24px, env(safe-area-inset-bottom, 24px));
+      border-top: 1px solid var(--border);
+    }
+    .hub-footer strong { color: var(--text-mid); font-weight: 700; }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 18px; }
+      .hub-hero-overlay { padding: 0 18px 24px; }
+      .hub-body { padding: 28px 20px 0; }
+      .hub-footer { padding-left: 20px; padding-right: 20px; }
+    }
+    @media (max-width: 360px) {
+      .hub-body { padding: 24px 14px 0; }
+      .hub-card { padding: 12px 13px; }
+      .hub-card-badge { width: 32px; height: 32px; font-size: 12px; }
+      .hub-card-title { font-size: 13.5px; }
+      .hub-footer { padding-left: 14px; padding-right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-badge">Re:Brush Guide Hub</div>
+    <h1>비밀번호 확인</h1>
+    <p>담당자에게 전달받은 비밀번호를 입력해 주세요.</p>
+    <input type="password" id="pw" inputmode="numeric" maxlength="4" placeholder="&bull;&bull;&bull;&bull;" autocomplete="off" aria-label="비밀번호">
+    <button type="button" id="pwBtn">입장하기</button>
+    <div class="gate-err" id="pwErr" role="alert"></div>
+  </div>
+</div>
+
+<!-- HUB -->
+<div id="hub">
+  <div class="wrap">
+    <div class="hub-hero">
+      <img src="image/banner.png" alt="리브러쉬 100배 농축 가글" width="768" height="568">
+      <div class="hub-hero-overlay">
+        <div class="hero-eyebrow">Guide Hub</div>
+        <div class="hero-title">리브러쉬 × 코스트코 가이드 허브</div>
+        <div class="hero-sub">Re:Brush × Costco Campaign</div>
+      </div>
+    </div>
+
+    <div class="hub-body">
+      <div class="hub-label">Guidelines</div>
+      <div class="hub-title">리브러쉬 코스트코 입점 캠페인</div>
+      <div class="hub-desc">클로브 100배 농축 가글 더블세트&nbsp;&mdash; 안내받으신 <strong>타입</strong>의 가이드라인을 열어주세요.</div>
+
+      <div class="hub-list" id="hubList"></div>
+
+      <div class="hub-note">&bull; 타입은 브랜드에서 채널 성격에 맞춰 배정해 드립니다. 본인 타입이 확실하지 않은 경우 담당자에게 확인해 주세요.</div>
+    </div>
+
+    <div class="hub-footer">
+      <strong>Re:Brush (리브러쉬)</strong><br>
+      본 가이드라인은 선별된 크리에이터에게만 제공되는 자료입니다.
+    </div>
+  </div>
+</div>
+
+<script>
+  /* 가이드 목록 — 타입 추가·수정은 여기만 바꾸면 됩니다 */
+  var GUIDES = [
+    { badge: 'A', type: 'A Type', fee: '10만원', href: 'a-type.html' },
+    { badge: 'B', type: 'B Type', fee: '15만원', href: 'b-type.html' },
+    { badge: 'C', type: 'C Type', fee: '20만원', href: 'c-type.html' }
+  ];
+
+  var PASSWORD = '0907';
+  var STORAGE_KEY = 'rebrush_costco_hub_ok';
+
+  var gate = document.getElementById('gate');
+  var hub = document.getElementById('hub');
+  var pwInput = document.getElementById('pw');
+  var pwBtn = document.getElementById('pwBtn');
+  var pwErr = document.getElementById('pwErr');
+  var hubList = document.getElementById('hubList');
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function renderList() {
+    hubList.innerHTML = GUIDES.map(function (g) {
+      return '<a class="hub-card" href="' + esc(g.href) + '">' +
+               '<span class="hub-card-left">' +
+                 '<span class="hub-card-badge">' + esc(g.badge) + '</span>' +
+                 '<span>' +
+                   '<span class="hub-card-title">' + esc(g.type) +
+                     '<span class="hub-card-fee">' + esc(g.fee) + '</span>' +
+                   '</span>' +
+                   '<span class="hub-card-sub">코스트코 방문 · 릴스 가이드라인</span>' +
+                 '</span>' +
+               '</span>' +
+               '<span class="hub-card-arrow">&rarr;</span>' +
+             '</a>';
+    }).join('');
+  }
+
+  function unlock() {
+    pwErr.textContent = '';
+    gate.style.display = 'none';
+    hub.style.display = 'block';
+    try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+  }
+
+  function tryUnlock() {
+    if (pwInput.value.trim() === PASSWORD) {
+      unlock();
+    } else {
+      pwErr.textContent = '비밀번호가 올바르지 않습니다.';
+      pwInput.value = '';
+      pwInput.focus();
+    }
+  }
+
+  renderList();
+
+  var alreadyIn = false;
+  try { alreadyIn = sessionStorage.getItem(STORAGE_KEY) === '1'; } catch (e) {}
+  if (alreadyIn) unlock();
+
+  pwBtn.addEventListener('click', tryUnlock);
+  pwInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') tryUnlock(); });
+  pwInput.addEventListener('input', function () { pwErr.textContent = ''; });
+  pwInput.focus();
+</script>
+
+</body>
+</html>
