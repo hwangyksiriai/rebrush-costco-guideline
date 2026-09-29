@@ -487,29 +487,63 @@
       word-break: keep-all;
     }
 
-    /* GUARDRAILS */
+    /* GUARDRAILS — 해야 할 것(O) / 하면 안 되는 것(X) */
     .guard-grid { display: grid; gap: 12px; }
-    .guard-box { border-radius: 12px; padding: 18px 20px; }
-    .guard-box.must { background: var(--text-dark); }
-    .guard-box.avoid { background: var(--warm-white); border: 1px solid var(--border); }
+    .guard-box { border-radius: 12px; padding: 18px 18px 14px; border: 1.5px solid; }
+    .guard-box.must { background: #EEF8F4; border-color: #3FA878; }
+    .guard-box.avoid { background: #FFF1F0; border-color: #E0544A; }
     .guard-title {
-      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
       margin-bottom: 12px;
     }
-    .guard-box.must .guard-title { color: #FFFFFF; }
-    .guard-box.avoid .guard-title { color: var(--text-dark); }
-    .guard-item {
-      font-size: 12.5px;
-      line-height: 1.7;
-      padding: 4px 0 4px 18px;
-      position: relative;
+    .guard-title small { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; opacity: 0.7; }
+    .guard-mark {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .guard-box.must .guard-item { color: rgba(255,255,255,0.85); }
-    .guard-box.avoid .guard-item { color: var(--text-mid); }
-    .guard-item::before { content: '\25A1'; position: absolute; left: 0; opacity: 0.7; }
+    .guard-box.must .guard-title { color: #1E6B4A; }
+    .guard-box.must .guard-mark { background: #3FA878; }
+    .guard-box.avoid .guard-title { color: #B3261E; }
+    .guard-box.avoid .guard-mark { background: #E0544A; }
+    .guard-item {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.6;
+      padding: 9px 0 9px 28px;
+      position: relative;
+      color: var(--text-dark);
+      border-top: 1px dashed rgba(0,0,0,0.08);
+    }
+    .guard-item::before {
+      position: absolute;
+      left: 2px;
+      top: 9px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+    }
+    .guard-box.must .guard-item::before { content: '\2713'; background: #3FA878; }
+    .guard-box.avoid .guard-item::before { content: '\2715'; background: #E0544A; }
+    .guard-item strong { font-weight: 700; }
+    .guard-box.avoid .guard-item strong { color: #B3261E; }
 
     /* ANGLE GUIDE */
     .angle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -1836,7 +1870,7 @@
     <div class="fold-body">
       <div class="guard-grid">
         <div class="guard-box must">
-          <div class="guard-title">Must Include</div>
+          <div class="guard-title"><span class="guard-mark">O</span><span><small>MUST INCLUDE</small>꼭 해주세요</span></div>
           <div class="guard-item">코스트코 매장 + 매대 사이즈 비교 장면</div>
           <div class="guard-item">정확한 제품명 (클로브 100배 농축 가글 더블세트)</div>
           <div class="guard-item">실구매 장면과 집에서의 실제 사용 후기</div>
@@ -1844,12 +1878,12 @@
           <div class="guard-item">광고 표기(#유료광고)·계정 태그·공동작업자</div>
         </div>
         <div class="guard-box avoid">
-          <div class="guard-title">Avoid</div>
-          <div class="guard-item">“코스트코 유일한 무알콜 가글” 등 단정 표현</div>
-          <div class="guard-item">“모든 가글보다 편하다” 등 절대 비교</div>
+          <div class="guard-title"><span class="guard-mark">X</span><span><small>AVOID</small>하면 안 돼요</span></div>
+          <div class="guard-item"><strong>“유일한”</strong> 표현 사용 금지 (예: 코스트코 유일한 무알콜 가글)</div>
+          <div class="guard-item"><strong>“모든 가글보다 편하다”</strong> 등 절대 비교</div>
           <div class="guard-item">타 브랜드명·로고를 부각하거나 비방하는 표현</div>
           <div class="guard-item">추천상품형에서 가글 등 동일 카테고리 상품 함께 추천</div>
-          <div class="guard-item">“구취 치료” 등 의학적 효능 단정, 양치 대체 표현</div>
+          <div class="guard-item"><strong>“구취 치료”</strong> 등 의학적 효능 단정, <strong>양치 대체</strong> 표현</div>
           <div class="guard-item">가격·회당 비용 임의 안내, 타 고객 얼굴 노출, 상업 음원</div>
         </div>
       </div>
