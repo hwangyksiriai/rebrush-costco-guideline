@@ -1340,6 +1340,35 @@
     }
     .prod-hero img { width: 100%; height: auto; display: block; }
     .banner-overlay .hero-chip { color: #FFFFFF; }
+    .banner-overlay .hero-chip.hero-chip--hl { background: #FFFFFF; border-color: #FFFFFF; color: var(--brand-deep); }
+
+    /* 입점일 강조 */
+    .launch-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, var(--brand-deep) 0%, var(--brand) 100%);
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .launch-date {
+      flex: none;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .launch-date small { display: block; font-size: 10px; letter-spacing: 0.2em; opacity: 0.75; margin-bottom: 6px; }
+    .launch-text { font-size: 13px; line-height: 1.6; padding-left: 16px; border-left: 1px solid rgba(255,255,255,0.35); }
+    .launch-text strong { display: block; font-size: 15px; }
+    .launch-text span { color: var(--on-brand-accent); font-size: 12px; }
+    @media (max-width: 360px) {
+      .launch-box { gap: 12px; padding: 16px; }
+      .launch-date { font-size: 28px; }
+      .launch-text { padding-left: 12px; }
+    }
     .banner-overlay .hero-chip-row { margin-top: 14px; }
 
     /* 숫자 강조 */
@@ -1503,7 +1532,7 @@
     <div class="header-title">리브러쉬 × 코스트코 가이드라인</div>
     <div class="header-sub">Re:Brush × Costco Campaign</div>
     <div class="hero-chip-row">
-      <span class="hero-chip">코스트코 입점</span>
+      <span class="hero-chip hero-chip--hl">10.19 코스트코 입점</span>
       <span class="hero-chip">매장 방문·구매</span>
       <span class="hero-chip">릴스</span>
     </div>
@@ -1550,6 +1579,11 @@
 <div class="section">
   <div class="section-label">Campaign Info</div>
   <div class="section-title">캠페인 개요</div>
+
+  <div class="launch-box">
+    <div class="launch-date"><small>OPEN</small>10.19</div>
+    <div class="launch-text"><strong>코스트코 입점일</strong><span>10월 19일부터 매장에서 구매할 수 있어요</span></div>
+  </div>
 
   <div class="elig-box">
     <div class="must-icon">🪪</div>
