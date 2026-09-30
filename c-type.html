@@ -1559,12 +1559,16 @@
   <div class="info-box">
     <div class="info-box-title">Schedule & Details</div>
     <div class="info-row">
+      <div class="info-key">입점일</div>
+      <div class="info-val"><strong>10월 19일</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">리브러쉬 코스트코 입점 · 입점일 이후 매장 방문</span></div>
+    </div>
+    <div class="info-row">
       <div class="info-key">방문 지점</div>
       <div class="info-val"><strong>전국 코스트코 전 지점</strong></div>
     </div>
     <div class="info-row">
       <div class="info-key">업로드</div>
-      <div class="info-val"><strong>10월 22일 이후</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">상세 일정은 선정 후 개별 조율 · ⚠️ 확정 일정 미준수 시 고료 지급 불가</span></div>
+      <div class="info-val"><strong>10월 29일 ~ 30일</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">⚠️ 업로드 일정 미준수 시 고료 지급 불가</span></div>
     </div>
     <div class="info-row">
       <div class="info-key">형식</div>
@@ -1572,7 +1576,7 @@
     </div>
     <div class="info-row">
       <div class="info-key">제품</div>
-      <div class="info-val">매장에서 <strong>직접 구매</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">제품 구매 비용은 고료에 포함되어 있습니다</span></div>
+      <div class="info-val">매장에서 <strong>직접 구매</strong><br><span style="font-size:11px;color:rgba(255,255,255,0.58)">코스트코 판매가 2만원대 · 구매 비용은 고료에 포함</span></div>
     </div>
     <div class="info-row">
       <div class="info-key">고료</div>
@@ -1594,7 +1598,7 @@
 
   <div class="key-msg-box" style="margin-top:20px;">
     <div class="key-msg-title">캠페인 목적&nbsp;·&nbsp;<span class="nb">코스트코 입점 소식</span></div>
-    <div class="key-msg-text" style="margin-top:-8px;margin-bottom:4px;">리브러쉬 <strong>클로브 100배 농축 가글 더블세트</strong>가 코스트코에 입점했습니다. 팔로워들이 <strong>“다음에 코스트코 가면 사야지”</strong> 하고 매장을 찾게 만드는 것이 이번 캠페인의 목표입니다.</div>
+    <div class="key-msg-text" style="margin-top:-8px;margin-bottom:4px;">리브러쉬 <strong>클로브 100배 농축 가글 더블세트</strong>가 <strong>10월 19일</strong> 코스트코에 입점합니다. 팔로워들이 <strong>“다음에 코스트코 가면 사야지”</strong> 하고 매장을 찾게 만드는 것이 이번 캠페인의 목표입니다.</div>
     <div class="key-msg-item">
       <div class="key-msg-badge">콘텐츠 방향</div>
       <div class="key-msg-text">“코스트코에서 가글을 비교하다가 <strong>리브러쉬 더블세트를 선택한 이유</strong>”를 자연스러운 <span class="nb">쇼핑 브이로그</span>로</div>
@@ -1614,7 +1618,7 @@
     <div>
       <div class="product-name">리브러쉬 클로브 100배 농축 가글 더블세트</div>
       <div style="font-size:12.5px;font-weight:700;color:var(--brand-text);margin-top:2px;">한 방울로 숨결리셋 — 국내최초 무알콜 100배 농축가글</div>
-      <div style="font-size:12.5px;color:var(--text-mid);margin-top:2px;">50ml × 2개 &nbsp;·&nbsp; 코스트코 판매가 추후 안내</div>
+      <div style="font-size:12.5px;color:var(--text-mid);margin-top:2px;">50ml × 2개 &nbsp;·&nbsp; 코스트코 판매가 <strong>2만원대</strong></div>
     </div>
     <div class="stat-row">
       <div class="stat"><div class="stat-num">100<small>배</small></div><div class="stat-cap">물에 희석하는<br>농축 가글</div></div>
@@ -2010,6 +2014,12 @@
     </div>
 
     <div class="form-group">
+      <label class="form-label" for="appVisitDate">방문 예정일<span class="req">*</span></label>
+      <input type="date" id="appVisitDate" name="visitDate" class="form-input" min="2026-10-19" max="2026-10-30" required>
+      <div class="ref-note" style="margin-top:8px;">• 입점일(10월 19일) 이후, 업로드일(10월 29~30일) 전까지 방문해 주세요.</div>
+    </div>
+
+    <div class="form-group">
       <label class="form-label" for="appNote">요청사항<span class="opt">(선택)</span></label>
       <textarea id="appNote" name="note" class="form-textarea" placeholder="문의나 요청사항을 적어주세요"></textarea>
     </div>
@@ -2018,8 +2028,8 @@
       <div class="note-box-title">📌 구매·정산 안내</div>
       <ul>
         <li>제품은 코스트코 매장에서 <strong>직접 구매</strong>해 주세요. 제품 구매 비용은 <strong>고료에 포함</strong>되어 있습니다.</li>
-        <li>업로드는 <strong>10월 22일 이후</strong> 진행되며, 상세 일정은 선정 후 개별 조율합니다.</li>
-        <li>조율된 업로드 일정 내 업로드 시 정산이 진행됩니다.</li>
+        <li>업로드는 <strong>10월 29일 ~ 30일</strong>에 진행해 주세요.</li>
+        <li>업로드 일정 내 업로드 시 정산이 진행됩니다.</li>
         <li>정산 자료 제출 후 <strong>2주</strong> 이내 지급됩니다.</li>
       </ul>
     </div>
@@ -2145,6 +2155,7 @@
       email: form.email.value.trim(),
       membership: form.membership.checked ? '보유' : '',
       store: form.store.value.trim(),
+      visitDate: form.visitDate.value,
       note: form.note.value.trim()
     };
 

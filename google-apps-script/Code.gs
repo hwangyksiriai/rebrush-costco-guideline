@@ -15,7 +15,7 @@ const SHEET_NAME = '시트1';
 
 const HEADERS = [
   '제출일시', '타입', '고료', '이름', '인스타그램', '휴대폰', '이메일',
-  '코스트코 회원권', '방문 지점', '요청사항', '캠페인'
+  '코스트코 회원권', '방문 지점', '방문 예정일', '요청사항', '캠페인'
 ];
 
 function doPost(e) {
@@ -35,6 +35,7 @@ function doPost(e) {
       d.email || '',
       d.membership || '',
       d.store || '',
+      d.visitDate || '',
       d.note || '',
       d.campaign || ''
     ]);
