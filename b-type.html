@@ -1515,7 +1515,80 @@
     .agree-list .agree-row { margin: 0; padding: 10px 0; border-bottom: 1px dashed var(--border); }
     .agree-list .agree-row:last-child { border-bottom: none; }
 
+    /* SECTION ACCORDION */
+    .section { scroll-margin-top: 12px; }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .section-head-text { min-width: 0; }
+    .section-chevron {
+      flex: none;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: #FFFFFF;
+      color: var(--brand-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: transform 0.25s;
+    }
+    .section.is-open .section-chevron { transform: rotate(180deg); background: var(--brand-pale); }
+    .section-body { display: none; }
+    .section.is-open .section-body { display: block; }
+    .section:not(.is-open) { padding-top: 26px; padding-bottom: 26px; }
+    .section:not(.is-open) .section-label { margin-bottom: 8px; }
+    .section:not(.is-open) .section-title { margin-bottom: 0; }
+    .section:not(.is-open) .section-chevron { margin-bottom: 0; }
+
+    /* FLOATING MENU */
+    .float-nav {
+      position: fixed;
+      left: 50%;
+      bottom: max(12px, env(safe-area-inset-bottom, 12px));
+      transform: translateX(-50%);
+      width: calc(100% - 24px);
+      max-width: 616px;
+      z-index: 50;
+      background: rgba(20,48,58,0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(11,42,49,0.28);
+      padding: 6px;
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .float-nav::-webkit-scrollbar { display: none; }
+    .float-nav a {
+      flex: 1 0 auto;
+      text-align: center;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.72);
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 11px;
+      white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .float-nav a.active { background: var(--brand); color: #FFFFFF; }
+    .footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+    .copy-toast { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
     @media (max-width: 360px) {
+      .float-nav a { font-size: 12px; padding: 10px 9px; }
       .stat-num { font-size: 16px; }
       .diff-vs { grid-template-columns: 1fr; }
       .diff-arrow { transform: rotate(90deg); justify-self: center; }
@@ -1540,8 +1613,9 @@
 </div>
 
 <!-- ABOUT -->
-<div class="section">
+<div class="section" id="about" data-nav="브랜드">
   <div class="section-label">About Brand</div>
+  <div class="section-title">브랜드 소개</div>
   <p class="about-lead">
     <strong style="display:block;font-size:17px;font-weight:700;color:var(--text-dark);line-height:1.45;margin-bottom:6px;">국내 최초 100배 농축 가글액을 만든 프리미엄 토탈 구강케어 브랜드, 리브러쉬</strong>
     <span style="display:block;font-size:13px;font-weight:600;letter-spacing:0.04em;color:var(--brand-text);margin-bottom:16px;">THERAPEUTIC MOUTHWASH</span>
@@ -1576,7 +1650,7 @@
 </div>
 
 <!-- 캠페인 개요 -->
-<div class="section">
+<div class="section" id="info" data-nav="개요">
   <div class="section-label">Campaign Info</div>
   <div class="section-title">캠페인 개요</div>
 
@@ -1681,7 +1755,7 @@
 </div>
 
 <!-- 방문 가이드 -->
-<div class="section">
+<div class="section" id="visit" data-nav="방문">
   <div class="section-label">Store Visit</div>
   <div class="section-title">코스트코 방문 가이드</div>
 
@@ -1732,7 +1806,7 @@
 </div>
 
 <!-- 제작 가이드 -->
-<div class="section">
+<div class="section" id="guide" data-nav="제작">
   <div class="section-label">Content Guide</div>
   <div class="section-title">제작 가이드</div>
 
@@ -2058,7 +2132,7 @@
 </div>
 
 <!-- 캠페인 신청 -->
-<div class="section" id="apply">
+<div class="section" id="apply" data-nav="신청">
   <div class="section-label">Application</div>
   <div class="section-title">캠페인 신청</div>
 
@@ -2135,7 +2209,7 @@
 </div>
 
 <!-- 정산 -->
-<div class="section">
+<div class="section" id="settle" data-nav="정산">
   <div class="section-label">Settlement</div>
   <div class="section-title">정산</div>
   <div class="settlement-lead">캠페인 선정 완료 후 정산을 위한 서류를 누락 없이 제출해 주세요.<br>정산은 <strong>정산 자료 제출 후 2주</strong> 이내 지급됩니다.</div>
@@ -2170,6 +2244,8 @@
 
 <div class="copy-toast" id="copyToast"></div>
 
+<nav class="float-nav" id="floatNav" aria-label="가이드 메뉴"></nav>
+
 <script>
   // ===== 캠페인 설정 (여기만 바꾸면 페이지 전체에 반영) =====
   const BRAND_HANDLE = '@rebrush_official';
@@ -2183,6 +2259,97 @@
     if (BRAND_HANDLE) el.textContent = BRAND_HANDLE;
     else el.classList.add('tbd');
   });
+
+  // ===== 섹션 아코디언 + 하단 플로팅 메뉴 =====
+  (function () {
+    const sections = Array.from(document.querySelectorAll('.section[data-nav]'));
+    const nav = document.getElementById('floatNav');
+    const links = {};
+
+    function setOpen(sec, open) {
+      sec.classList.toggle('is-open', open);
+      sec.querySelector('.section-head').setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    sections.forEach((sec, i) => {
+      const label = sec.querySelector('.section-label');
+      const title = sec.querySelector('.section-title');
+      const head = document.createElement('div');
+      head.className = 'section-head';
+      head.setAttribute('role', 'button');
+      head.setAttribute('tabindex', '0');
+      const text = document.createElement('div');
+      text.className = 'section-head-text';
+      sec.insertBefore(head, label);
+      text.appendChild(label);
+      text.appendChild(title);
+      head.appendChild(text);
+      const chev = document.createElement('span');
+      chev.className = 'section-chevron';
+      chev.setAttribute('aria-hidden', 'true');
+      chev.innerHTML = '&#8964;';
+      head.appendChild(chev);
+
+      const body = document.createElement('div');
+      body.className = 'section-body';
+      while (head.nextSibling) body.appendChild(head.nextSibling);
+      sec.appendChild(body);
+
+      setOpen(sec, i === 0);
+      const toggle = () => setOpen(sec, !sec.classList.contains('is-open'));
+      head.addEventListener('click', toggle);
+      head.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
+      const a = document.createElement('a');
+      a.href = '#' + sec.id;
+      a.textContent = sec.dataset.nav;
+      nav.appendChild(a);
+      links[sec.id] = a;
+    });
+
+    function goTo(id) {
+      const sec = document.getElementById(id);
+      if (!sec || !sec.classList.contains('section')) return false;
+      setOpen(sec, true);
+      sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + id);
+      return true;
+    }
+
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="#"]');
+      if (a && goTo(a.getAttribute('href').slice(1))) e.preventDefault();
+    });
+
+    let lastActive = undefined;
+    function updateActive() {
+      const y = window.innerHeight * 0.35;
+      let current = null;
+      sections.forEach(sec => { if (sec.getBoundingClientRect().top <= y) current = sec.id; });
+      if (current === lastActive) return;
+      lastActive = current;
+      Object.keys(links).forEach(id => links[id].classList.toggle('active', id === current));
+      if (current && nav.scrollWidth > nav.clientWidth) {
+        // 메뉴가 넘칠 때만, 즉시 이동 (smooth 동시 실행 시 페이지 스크롤이 끊기는 문제 방지)
+        const a = links[current];
+        nav.scrollLeft = Math.max(0, a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2);
+      }
+    }
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { updateActive(); ticking = false; });
+    }, { passive: true });
+    updateActive();
+
+    if (location.hash) {
+      const sec = document.getElementById(location.hash.slice(1));
+      if (sec && sec.classList.contains('section')) setOpen(sec, true);
+    }
+  })();
 
   function showToast(text) {
     const toast = document.getElementById('copyToast');
